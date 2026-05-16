@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ ZEK V.1 OPTIMIZER
+#  ZEK V.1 OPTIMIZER
 
 ### 🚀 Windows 10 Optimizer Script
 
