@@ -56,7 +56,7 @@
 ### Step 1: Download
 Clone the repository or download the `ZEK_V1_Optimizer.bat` file directly.
 
-git clone https://github.com/nke18/ZEK-V1-Optimizer.git
+git clone https://github.com/nke18/zekwin10-optimizer.git
 
 ### Step 2: Run as Administrator
 Right-click on ZEK_V1_Optimizer.bat and select "Run as administrator".
