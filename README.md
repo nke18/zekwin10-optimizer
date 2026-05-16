@@ -20,7 +20,6 @@
 - [📦 Requirements](#-requirements)
 - [🚀 Installation & Usage](#-installation--usage)
 - [🖥️ Main Menu](#️-main-menu)
-- [🧪 Quick Examples](#-quick-examples)
 - [⚠️ Disclaimer](#️-disclaimer)
 - [📄 License](#-license)
 - [🤝 Contributing](#-contributing)
@@ -67,5 +66,74 @@ Type the number of the desired option and press Enter.
 
 💡 Tip: Always create a restore point before applying major changes!
 
-⚠️ Disclaimer
+
+---
+
+## 🖥️ Main Menu
+
+========================================================
+                     ZEK V.1 OPTIMIZER
+========================================================
+        WINDOWS 10 OPTIMIZER - MAIN MENU
+========================================================
+
+  1. Basic System Optimizations
+  2. Disable Unnecessary Services
+  3. Reduce Background Processes
+  4. Privacy Settings
+  5. System Cleanup
+  6. Advanced Optimizations
+  7. Restore Points
+  8. System Information
+  9. Exit
+
+========================================================
+
+---
+
+## ⚠️ Disclaimer
+
 WARNING: This script modifies the Windows Registry and system services. While all changes are reversible (using restore points or manual reconfiguration), the author is not responsible for any system malfunction or data loss. Use at your own risk.
+
+---
+
+## ✅ Recommended precautions:
+
+Create a full system backup
+
+Create a restore point before each change
+
+Only apply optimizations you fully understand
+
+Restart your PC after applying changes
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+MIT License
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Fork the project
+
+Create your feature branch (git checkout -b feature/amazing)
+
+Commit your changes (git commit -m 'Add some amazing feature')
+
+Push to the branch (git push origin feature/amazing)
+
+Open a Pull Request
+
+</div>
