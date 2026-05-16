@@ -71,12 +71,6 @@ Type the number of the desired option and press Enter.
 
 ## 🖥️ Main Menu
 
-========================================================
-                     ZEK V.1 OPTIMIZER
-========================================================
-        WINDOWS 10 OPTIMIZER - MAIN MENU
-========================================================
-
   1. Basic System Optimizations
   2. Disable Unnecessary Services
   3. Reduce Background Processes
@@ -86,8 +80,6 @@ Type the number of the desired option and press Enter.
   7. Restore Points
   8. System Information
   9. Exit
-
-========================================================
 
 ---
 
