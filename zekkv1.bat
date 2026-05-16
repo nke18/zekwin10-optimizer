@@ -1,8 +1,8 @@
 @echo off
-title ZEK V.1 Optimizer - Optimizador de Windows 10
+title ZEK V.1 Optimizer - Windows 10 Optimizer
 setlocal enabledelayedexpansion
 
-:: Verificar permisos de administrador
+:: Check administrator privileges
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     cls
@@ -10,15 +10,15 @@ if %errorlevel% neq 0 (
     echo.
     echo  ========================================================
     echo.
-    echo                     SE REQUIERE ADMINISTRADOR
+    echo                    ADMINISTRATOR REQUIRED
     echo.
     echo  ========================================================
     echo.
-    echo  Este script necesita ejecutarse como Administrador
-    echo  para funcionar correctamente.
+    echo  This script needs to be run as Administrator
+    echo  to work properly.
     echo.
-    echo  Click derecho sobre el archivo .bat y selecciona
-    echo  "Ejecutar como administrador"
+    echo  Right-click on the .bat file and select
+    echo  "Run as administrator"
     echo.
     echo  ========================================================
     echo.
@@ -26,538 +26,538 @@ if %errorlevel% neq 0 (
     exit
 )
 
-:INICIO
+:START
 cls
 color 09
 echo.
 echo  ========================================================
 echo.
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo.
 echo  ========================================================
-echo           OPTIMIZADOR DE WINDOWS 10 - MENU PRINCIPAL
+echo             WINDOWS 10 OPTIMIZER - MAIN MENU
 echo  ========================================================
 echo.
-echo    1. Optimizaciones Basicas del Sistema
-echo    2. Desactivar Servicios Innecesarios
-echo    3. Reducir Procesos en Segundo Plano
-echo    4. Configuracion de Privacidad
-echo    5. Limpieza del Sistema
-echo    6. Optimizaciones Avanzadas
-echo    7. Puntos de Restauracion
-echo    8. Informacion del Sistema
-echo    9. Salir
+echo    1. Basic System Optimizations
+echo    2. Disable Unnecessary Services
+echo    3. Reduce Background Processes
+echo    4. Privacy Configuration
+echo    5. System Cleanup
+echo    6. Advanced Optimizations
+echo    7. Restore Points
+echo    8. System Information
+echo    9. Exit
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  ZEK V.1 - Selecciona una opcion [1-9]: "
+set /p "option=  ZEK V.1 - Select an option [1-9]: "
 
-if "%opcion%"=="1" goto BASICAS
-if "%opcion%"=="2" goto SERVICIOS
-if "%opcion%"=="3" goto PROCESOS
-if "%opcion%"=="4" goto PRIVACIDAD
-if "%opcion%"=="5" goto LIMPIEZA
-if "%opcion%"=="6" goto AVANZADAS
-if "%opcion%"=="7" goto MENU_RESTAURAR
-if "%opcion%"=="8" goto INFOSISTEMA
-if "%opcion%"=="9" goto SALIR
-goto INICIO
+if "%option%"=="1" goto BASIC
+if "%option%"=="2" goto SERVICES
+if "%option%"=="3" goto PROCESSES
+if "%option%"=="4" goto PRIVACY
+if "%option%"=="5" goto CLEANUP
+if "%option%"=="6" goto ADVANCED
+if "%option%"=="7" goto RESTORE_MENU
+if "%option%"=="8" goto SYSINFO
+if "%option%"=="9" goto EXIT
+goto START
 
-:BASICAS
+:BASIC
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            OPTIMIZACIONES BASICAS DEL SISTEMA
-echo  ========================================================
-echo.
-echo    1. Activar Maximo Rendimiento
-echo    2. Desactivar Animaciones de Windows
-echo    3. Desactivar Transparencias
-echo    4. Optimizar Plan de Energia (Alto Rendimiento)
-echo    5. Desactivar Notificaciones del Sistema
-echo    6. Aplicar Todas las Optimizaciones Basicas
-echo    7. Volver al Menu Principal
-echo.
+echo                BASIC SYSTEM OPTIMIZATIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-7]: "
+echo    1. Enable Maximum Performance
+echo    2. Disable Windows Animations
+echo    3. Disable Transparency
+echo    4. Optimize Power Plan (High Performance)
+echo    5. Disable System Notifications
+echo    6. Apply All Basic Optimizations
+echo    7. Return to Main Menu
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-7]: "
 
-if "%opcion%"=="1" goto MAXRENDIMIENTO
-if "%opcion%"=="2" goto ANIMACIONES
-if "%opcion%"=="3" goto TRANSPARENCIAS
-if "%opcion%"=="4" goto PLANENERGIA
-if "%opcion%"=="5" goto NOTIFICACIONES
-if "%opcion%"=="6" goto APLICARBASICAS
-if "%opcion%"=="7" goto INICIO
-goto BASICAS
+if "%option%"=="1" goto MAXPERFORMANCE
+if "%option%"=="2" goto ANIMATIONS
+if "%option%"=="3" goto TRANSPARENCY
+if "%option%"=="4" goto POWERPLAN
+if "%option%"=="5" goto NOTIFICATIONS
+if "%option%"=="6" goto APPLYBASIC
+if "%option%"=="7" goto START
+goto BASIC
 
-:MAXRENDIMIENTO
+:MAXPERFORMANCE
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              ACTIVAR MAXIMO RENDIMIENTO
-echo  ========================================================
-echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si, crear punto de restauracion
-echo    2. No, continuar sin restaurar
-echo    3. Cancelar y volver
-echo.
+echo                ENABLE MAXIMUM PERFORMANCE
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo    Do you want to create a restore point first?
+echo    1. Yes, create restore point
+echo    2. No, continue without restore
+echo    3. Cancel and go back
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto MAXRENDIMIENTO_CON_RESTAURAR
-if "%opcion%"=="2" goto MAXRENDIMIENTO_APLICAR
-if "%opcion%"=="3" goto BASICAS
-goto MAXRENDIMIENTO
+if "%option%"=="1" goto MAXPERFORMANCE_WITH_RESTORE
+if "%option%"=="2" goto MAXPERFORMANCE_APPLY
+if "%option%"=="3" goto BASIC
+goto MAXPERFORMANCE
 
-:MAXRENDIMIENTO_CON_RESTAURAR
+:MAXPERFORMANCE_WITH_RESTORE
 cls
 color 0D
-echo Creando punto de restauracion antes de continuar...
-call :CREAR_PUNTO_RESTAURACION "Antes de Maximo Rendimiento"
-if !punto_creado! equ 0 (
+echo Creating restore point before continuing...
+call :CREATE_RESTORE_POINT "Before Maximum Performance"
+if !point_created! equ 0 (
     echo.
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto BASICAS
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto BASIC
 )
 
-:MAXRENDIMIENTO_APLICAR
+:MAXPERFORMANCE_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Aplicando configuracion de maximo rendimiento...
+echo  ZEK V.1 - Applying maximum performance configuration...
 echo  ========================================================
 echo.
-echo  [1/3] Configurando efectos visuales...
+echo  [1/3] Configuring visual effects...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /t REG_DWORD /d 2 /f >nul 2>&1
 
-echo  [2/3] Ajustando rendimiento del sistema...
+echo  [2/3] Adjusting system performance...
 reg add "HKCU\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v HungAppTimeout /t REG_SZ /d 1000 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v WaitToKillAppTimeout /t REG_SZ /d 2000 /f >nul 2>&1
 
-echo  [3/3] Optimizando procesos en segundo plano...
+echo  [3/3] Optimizing background processes...
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v WaitToKillServiceTimeout /t REG_SZ /d 2000 /f >nul 2>&1
 
 echo.
 echo  ========================================================
-echo      [OK] Configuracion de maximo rendimiento aplicada!
+echo      [OK] Maximum performance configuration applied!
 echo  ========================================================
 echo.
 pause
-goto BASICAS
+goto BASIC
 
-:ANIMACIONES
+:ANIMATIONS
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo          DESACTIVAR ANIMACIONES DE WINDOWS
-echo  ========================================================
-echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si, crear punto de restauracion
-echo    2. No, continuar sin restaurar
-echo    3. Cancelar y volver
-echo.
+echo                DISABLE WINDOWS ANIMATIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo    Do you want to create a restore point first?
+echo    1. Yes, create restore point
+echo    2. No, continue without restore
+echo    3. Cancel and go back
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto ANIMACIONES_CON_RESTAURAR
-if "%opcion%"=="2" goto ANIMACIONES_APLICAR
-if "%opcion%"=="3" goto BASICAS
-goto ANIMACIONES
+if "%option%"=="1" goto ANIMATIONS_WITH_RESTORE
+if "%option%"=="2" goto ANIMATIONS_APPLY
+if "%option%"=="3" goto BASIC
+goto ANIMATIONS
 
-:ANIMACIONES_CON_RESTAURAR
+:ANIMATIONS_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Antes de Desactivar Animaciones"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto BASICAS
+call :CREATE_RESTORE_POINT "Before Disabling Animations"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto BASIC
 )
 
-:ANIMACIONES_APLICAR
+:ANIMATIONS_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando animaciones de Windows...
+echo  ZEK V.1 - Disabling Windows animations...
 echo  ========================================================
 echo.
-echo  [1/4] Desactivando animaciones de ventanas...
+echo  [1/4] Disabling window animations...
 reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 9012078010000000 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v MinAnimate /t REG_SZ /d 0 /f >nul 2>&1
 
-echo  [2/4] Desactivando animaciones de barra de tareas...
+echo  [2/4] Disabling taskbar animations...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAnimations /t REG_DWORD /d 0 /f >nul 2>&1
 
-echo  [3/4] Desactivando animaciones de inicio...
+echo  [3/4] Disabling startup animations...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v EnableBalloonTips /t REG_DWORD /d 0 /f >nul 2>&1
 
-echo  [4/4] Desactivando efectos de transicion...
+echo  [4/4] Disabling transition effects...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /t REG_DWORD /d 2 /f >nul 2>&1
 
 echo.
 echo  ========================================================
-echo        [OK] Animaciones desactivadas exitosamente!
+echo        [OK] Animations disabled successfully!
 echo  ========================================================
 echo.
 pause
-goto BASICAS
+goto BASIC
 
-:TRANSPARENCIAS
+:TRANSPARENCY
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              DESACTIVAR TRANSPARENCIAS
-echo  ========================================================
-echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si, crear punto de restauracion
-echo    2. No, continuar sin restaurar
-echo    3. Cancelar y volver
-echo.
+echo                   DISABLE TRANSPARENCY
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo    Do you want to create a restore point first?
+echo    1. Yes, create restore point
+echo    2. No, continue without restore
+echo    3. Cancel and go back
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto TRANSPARENCIAS_CON_RESTAURAR
-if "%opcion%"=="2" goto TRANSPARENCIAS_APLICAR
-if "%opcion%"=="3" goto BASICAS
-goto TRANSPARENCIAS
+if "%option%"=="1" goto TRANSPARENCY_WITH_RESTORE
+if "%option%"=="2" goto TRANSPARENCY_APPLY
+if "%option%"=="3" goto BASIC
+goto TRANSPARENCY
 
-:TRANSPARENCIAS_CON_RESTAURAR
+:TRANSPARENCY_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Antes de Desactivar Transparencias"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto BASICAS
+call :CREATE_RESTORE_POINT "Before Disabling Transparency"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto BASIC
 )
 
-:TRANSPARENCIAS_APLICAR
+:TRANSPARENCY_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando efectos de transparencia...
+echo  ZEK V.1 - Disabling transparency effects...
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v EnableTransparency /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f >nul 2>&1
 echo.
 echo  ========================================================
-echo        [OK] Transparencias desactivadas correctamente!
+echo        [OK] Transparency disabled successfully!
 echo  ========================================================
 echo.
 pause
-goto BASICAS
+goto BASIC
 
-:PLANENERGIA
+:POWERPLAN
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              OPTIMIZAR PLAN DE ENERGIA
+echo                   OPTIMIZE POWER PLAN
 echo  ========================================================
 echo.
-echo  Configurando plan de Alto Rendimiento...
-echo  (No se requiere restaurar para este cambio)
+echo  Configuring High Performance power plan...
+echo  (No restore point required for this change)
 echo.
 powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
-echo  [OK] Plan de energia configurado a Alto Rendimiento!
+echo  [OK] Power plan set to High Performance!
 echo.
 pause
-goto BASICAS
+goto BASIC
 
-:NOTIFICACIONES
+:NOTIFICATIONS
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo         DESACTIVAR NOTIFICACIONES DEL SISTEMA
-echo  ========================================================
-echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si, crear punto de restauracion
-echo    2. No, continuar sin restaurar
-echo    3. Cancelar y volver
-echo.
+echo               DISABLE SYSTEM NOTIFICATIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo    Do you want to create a restore point first?
+echo    1. Yes, create restore point
+echo    2. No, continue without restore
+echo    3. Cancel and go back
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto NOTIFICACIONES_CON_RESTAURAR
-if "%opcion%"=="2" goto NOTIFICACIONES_APLICAR
-if "%opcion%"=="3" goto BASICAS
-goto NOTIFICACIONES
+if "%option%"=="1" goto NOTIFICATIONS_WITH_RESTORE
+if "%option%"=="2" goto NOTIFICATIONS_APPLY
+if "%option%"=="3" goto BASIC
+goto NOTIFICATIONS
 
-:NOTIFICACIONES_CON_RESTAURAR
+:NOTIFICATIONS_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Antes de Desactivar Notificaciones"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto BASICAS
+call :CREATE_RESTORE_POINT "Before Disabling Notifications"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto BASIC
 )
 
-:NOTIFICACIONES_APLICAR
+:NOTIFICATIONS_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando notificaciones del sistema...
+echo  ZEK V.1 - Disabling system notifications...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\PushNotifications" /v ToastEnabled /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v NOC_GLOBAL_SETTING_ALLOW_NOTIFICATION_SOUND /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK /t REG_DWORD /d 0 /f >nul 2>&1
 echo.
 echo  ========================================================
-echo        [OK] Notificaciones desactivadas exitosamente!
+echo        [OK] Notifications disabled successfully!
 echo  ========================================================
 echo.
 pause
-goto BASICAS
+goto BASIC
 
-:APLICARBASICAS
+:APPLYBASIC
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo      APLICAR TODAS LAS OPTIMIZACIONES BASICAS
-echo  ========================================================
-echo.
-echo  Se aplicaran todos los cambios basicos.
-echo  Se recomienda crear punto de restauracion.
-echo.
-echo    1. Si, crear punto + aplicar cambios
-echo    2. No, aplicar sin restaurar
-echo    3. Cancelar y volver
-echo.
+echo              APPLY ALL BASIC OPTIMIZATIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo  All basic changes will be applied.
+echo  It is recommended to create a restore point.
+echo.
+echo    1. Yes, create restore point + apply changes
+echo    2. No, apply without restore
+echo    3. Cancel and go back
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto APLICARBASICAS_CON_RESTAURAR
-if "%opcion%"=="2" goto APLICARBASICAS_SIN_RESTAURAR
-if "%opcion%"=="3" goto BASICAS
-goto APLICARBASICAS
+if "%option%"=="1" goto APPLYBASIC_WITH_RESTORE
+if "%option%"=="2" goto APPLYBASIC_WITHOUT_RESTORE
+if "%option%"=="3" goto BASIC
+goto APPLYBASIC
 
-:APLICARBASICAS_CON_RESTAURAR
+:APPLYBASIC_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Antes de Optimizaciones Basicas"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto BASICAS
+call :CREATE_RESTORE_POINT "Before Basic Optimizations"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto BASIC
 )
 
-:APLICARBASICAS_SIN_RESTAURAR
+:APPLYBASIC_WITHOUT_RESTORE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Aplicando TODAS las optimizaciones basicas...
+echo  ZEK V.1 - Applying ALL basic optimizations...
 echo  ========================================================
 echo.
-echo  [1/5] Configurando maximo rendimiento...
-call :MAXRENDIMIENTO_DIRECTO
+echo  [1/5] Configuring maximum performance...
+call :MAXPERFORMANCE_DIRECT
 
-echo  [2/5] Desactivando animaciones...
-call :ANIMACIONES_DIRECTO
+echo  [2/5] Disabling animations...
+call :ANIMATIONS_DIRECT
 
-echo  [3/5] Desactivando transparencias...
-call :TRANSPARENCIAS_DIRECTO
+echo  [3/5] Disabling transparency...
+call :TRANSPARENCY_DIRECT
 
-echo  [4/5] Configurando plan de energia...
-call :PLANENERGIA_DIRECTO
+echo  [4/5] Configuring power plan...
+call :POWERPLAN_DIRECT
 
-echo  [5/5] Desactivando notificaciones...
-call :NOTIFICACIONES_DIRECTO
+echo  [5/5] Disabling notifications...
+call :NOTIFICATIONS_DIRECT
 
 echo.
 echo  ========================================================
-echo      [OK] Todas las optimizaciones basicas aplicadas!
-echo      Se recomienda reiniciar el sistema.
+echo      [OK] All basic optimizations applied!
+echo      It is recommended to restart the system.
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:SERVICIOS
+:SERVICES
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            DESACTIVAR SERVICIOS INNECESARIOS
+echo               DISABLE UNNECESSARY SERVICES
 echo  ========================================================
 echo.
-echo    1. Servicio de Fax
-echo    2. Servicio de Mapas
+echo    1. Fax Service
+echo    2. Maps Service
 echo    3. Xbox Live
-echo    4. Servicio de Impresion (si no usas impresora)
-echo    5. Bluetooth (si no usas Bluetooth)
-echo    6. Desactivar Todos los Servicios Anteriores
-echo    7. Volver al Menu Principal
+echo    4. Print Service (if you don't use a printer)
+echo    5. Bluetooth (if you don't use Bluetooth)
+echo    6. Disable All Services Above
+echo    7. Return to Main Menu
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-7]: "
+set /p "option=  Select an option [1-7]: "
 
-if "%opcion%"=="1" goto FAX
-if "%opcion%"=="2" goto MAPAS
-if "%opcion%"=="3" goto XBOX
-if "%opcion%"=="4" goto IMPRESION
-if "%opcion%"=="5" goto BLUETOOTH
-if "%opcion%"=="6" goto TODOSSERVICIOS
-if "%opcion%"=="7" goto INICIO
-goto SERVICIOS
+if "%option%"=="1" goto FAX
+if "%option%"=="2" goto MAPS
+if "%option%"=="3" goto XBOX
+if "%option%"=="4" goto PRINT
+if "%option%"=="5" goto BLUETOOTH
+if "%option%"=="6" goto ALLSERVICES
+if "%option%"=="7" goto START
+goto SERVICES
 
 :FAX
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              DESACTIVAR SERVICIO DE FAX
+echo                   DISABLE FAX SERVICE
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto FAX_CON_RESTAURAR
-if "%opcion%"=="2" goto FAX_APLICAR
-if "%opcion%"=="3" goto SERVICIOS
+if "%option%"=="1" goto FAX_WITH_RESTORE
+if "%option%"=="2" goto FAX_APPLY
+if "%option%"=="3" goto SERVICES
 goto FAX
 
-:FAX_CON_RESTAURAR
+:FAX_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Servicio Fax"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable Fax Service"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:FAX_APLICAR
+:FAX_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Servicio de Fax...
+echo  ZEK V.1 - Disabling Fax Service...
 sc config Fax start= disabled >nul 2>&1
 net stop Fax >nul 2>&1
-echo  [OK] Servicio de Fax desactivado correctamente!
+echo  [OK] Fax Service disabled successfully!
 echo.
 pause
-goto SERVICIOS
+goto SERVICES
 
-:MAPAS
+:MAPS
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            DESACTIVAR SERVICIO DE MAPAS
+echo                    DISABLE MAPS SERVICE
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto MAPAS_CON_RESTAURAR
-if "%opcion%"=="2" goto MAPAS_APLICAR
-if "%opcion%"=="3" goto SERVICIOS
-goto MAPAS
+if "%option%"=="1" goto MAPS_WITH_RESTORE
+if "%option%"=="2" goto MAPS_APPLY
+if "%option%"=="3" goto SERVICES
+goto MAPS
 
-:MAPAS_CON_RESTAURAR
+:MAPS_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Servicio Mapas"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable Maps Service"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:MAPAS_APLICAR
+:MAPS_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Servicio de Mapas...
+echo  ZEK V.1 - Disabling Maps Service...
 sc config MapsBroker start= disabled >nul 2>&1
 net stop MapsBroker >nul 2>&1
-echo  [OK] Servicio de Mapas desactivado correctamente!
+echo  [OK] Maps Service disabled successfully!
 echo.
 pause
-goto SERVICIOS
+goto SERVICES
 
 :XBOX
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo               DESACTIVAR XBOX LIVE
+echo                     DISABLE XBOX LIVE
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto XBOX_CON_RESTAURAR
-if "%opcion%"=="2" goto XBOX_APLICAR
-if "%opcion%"=="3" goto SERVICIOS
+if "%option%"=="1" goto XBOX_WITH_RESTORE
+if "%option%"=="2" goto XBOX_APPLY
+if "%option%"=="3" goto SERVICES
 goto XBOX
 
-:XBOX_CON_RESTAURAR
+:XBOX_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Xbox Live"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable Xbox Live"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:XBOX_APLICAR
+:XBOX_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando servicios de Xbox...
+echo  ZEK V.1 - Disabling Xbox services...
 sc config XblAuthManager start= disabled >nul 2>&1
 sc config XblGameSave start= disabled >nul 2>&1
 sc config XboxNetApiSvc start= disabled >nul 2>&1
@@ -566,926 +566,926 @@ net stop XblAuthManager >nul 2>&1
 net stop XblGameSave >nul 2>&1
 net stop XboxNetApiSvc >nul 2>&1
 net stop XboxGipSvc >nul 2>&1
-echo  [OK] Servicios de Xbox desactivados correctamente!
+echo  [OK] Xbox services disabled successfully!
 echo.
 pause
-goto SERVICIOS
+goto SERVICES
 
-:IMPRESION
+:PRINT
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo          DESACTIVAR SERVICIO DE IMPRESION
+echo                    DISABLE PRINT SERVICE
 echo  ========================================================
 echo.
-echo  ATENCION: Solo desactiva esto si NO usas impresora
+echo  WARNING: Only disable this if you do NOT use a printer
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto IMPRESION_CON_RESTAURAR
-if "%opcion%"=="2" goto IMPRESION_APLICAR
-if "%opcion%"=="3" goto SERVICIOS
-goto IMPRESION
+if "%option%"=="1" goto PRINT_WITH_RESTORE
+if "%option%"=="2" goto PRINT_APPLY
+if "%option%"=="3" goto SERVICES
+goto PRINT
 
-:IMPRESION_CON_RESTAURAR
+:PRINT_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Servicio Impresion"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable Print Service"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:IMPRESION_APLICAR
+:PRINT_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Servicio de Impresion...
+echo  ZEK V.1 - Disabling Print Service...
 sc config Spooler start= disabled >nul 2>&1
 net stop Spooler >nul 2>&1
-echo  [OK] Servicio de Impresion desactivado!
+echo  [OK] Print Service disabled!
 echo.
 pause
-goto SERVICIOS
+goto SERVICES
 
 :BLUETOOTH
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              DESACTIVAR BLUETOOTH
+echo                      DISABLE BLUETOOTH
 echo  ========================================================
 echo.
-echo  ATENCION: Solo si NO usas dispositivos Bluetooth
+echo  WARNING: Only if you do NOT use Bluetooth devices
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto BLUETOOTH_CON_RESTAURAR
-if "%opcion%"=="2" goto BLUETOOTH_APLICAR
-if "%opcion%"=="3" goto SERVICIOS
+if "%option%"=="1" goto BLUETOOTH_WITH_RESTORE
+if "%option%"=="2" goto BLUETOOTH_APPLY
+if "%option%"=="3" goto SERVICES
 goto BLUETOOTH
 
-:BLUETOOTH_CON_RESTAURAR
+:BLUETOOTH_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Bluetooth"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable Bluetooth"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:BLUETOOTH_APLICAR
+:BLUETOOTH_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Servicio Bluetooth...
+echo  ZEK V.1 - Disabling Bluetooth Service...
 sc config bthserv start= disabled >nul 2>&1
 sc config BluetoothUserService start= disabled >nul 2>&1
 net stop bthserv >nul 2>&1
-echo  [OK] Bluetooth desactivado correctamente!
+echo  [OK] Bluetooth disabled successfully!
 echo.
 pause
-goto SERVICIOS
+goto SERVICES
 
-:TODOSSERVICIOS
+:ALLSERVICES
 cls
 color 0E
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo        DESACTIVAR TODOS LOS SERVICIOS
-echo  ========================================================
-echo.
-echo  Se desactivaran TODOS los servicios listados.
-echo  Se recomienda crear punto de restauracion.
-echo.
-echo    1. Si, crear punto + desactivar
-echo    2. No, desactivar sin restaurar
-echo    3. Cancelar
-echo.
+echo                     DISABLE ALL SERVICES
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo  ALL listed services will be disabled.
+echo  It is recommended to create a restore point.
+echo.
+echo    1. Yes, create restore point + disable
+echo    2. No, disable without restore
+echo    3. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto TODOSSERVICIOS_CON_RESTAURAR
-if "%opcion%"=="2" goto TODOSSERVICIOS_SIN_RESTAURAR
-if "%opcion%"=="3" goto SERVICIOS
-goto TODOSSERVICIOS
+if "%option%"=="1" goto ALLSERVICES_WITH_RESTORE
+if "%option%"=="2" goto ALLSERVICES_WITHOUT_RESTORE
+if "%option%"=="3" goto SERVICES
+goto ALLSERVICES
 
-:TODOSSERVICIOS_CON_RESTAURAR
+:ALLSERVICES_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Todos los Servicios"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto SERVICIOS
+call :CREATE_RESTORE_POINT "Disable All Services"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto SERVICES
 )
 
-:TODOSSERVICIOS_SIN_RESTAURAR
+:ALLSERVICES_WITHOUT_RESTORE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando todos los servicios seleccionados...
+echo  ZEK V.1 - Disabling all selected services...
 echo  ========================================================
 echo.
-echo  [1/5] Desactivando Fax...
+echo  [1/5] Disabling Fax...
 sc config Fax start= disabled >nul 2>&1
 net stop Fax >nul 2>&1
-echo  [2/5] Desactivando Mapas...
+echo  [2/5] Disabling Maps...
 sc config MapsBroker start= disabled >nul 2>&1
 net stop MapsBroker >nul 2>&1
-echo  [3/5] Desactivando Xbox...
+echo  [3/5] Disabling Xbox...
 sc config XblAuthManager start= disabled >nul 2>&1
 sc config XblGameSave start= disabled >nul 2>&1
 sc config XboxNetApiSvc start= disabled >nul 2>&1
 sc config XboxGipSvc start= disabled >nul 2>&1
-echo  [4/5] Desactivando Impresion...
+echo  [4/5] Disabling Print...
 sc config Spooler start= disabled >nul 2>&1
 net stop Spooler >nul 2>&1
-echo  [5/5] Desactivando Bluetooth...
+echo  [5/5] Disabling Bluetooth...
 sc config bthserv start= disabled >nul 2>&1
 sc config BluetoothUserService start= disabled >nul 2>&1
 net stop bthserv >nul 2>&1
 echo.
 echo  ========================================================
-echo      [OK] Todos los servicios desactivados correctamente!
-echo      Se recomienda reiniciar el sistema.
+echo      [OK] All services disabled successfully!
+echo      It is recommended to restart the system.
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:PROCESOS
+:PROCESSES
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo         REDUCIR PROCESOS EN SEGUNDO PLANO
-echo  ========================================================
-echo.
-echo    1. Desactivar Aplicaciones en Segundo Plano
-echo    2. Desactivar SysMain (Superfetch)
-echo    3. Desactivar Windows Search
-echo    4. Desactivar Programas de Inicio
-echo    5. Optimizar uso de RAM
-echo    6. Aplicar TODAS las Reducciones de Procesos
-echo    7. Ver Procesos Actuales
-echo    8. Volver al Menu Principal
-echo.
+echo                 REDUCE BACKGROUND PROCESSES
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-8]: "
+echo    1. Disable Background Applications
+echo    2. Disable SysMain (Superfetch)
+echo    3. Disable Windows Search
+echo    4. Disable Startup Programs
+echo    5. Optimize RAM Usage
+echo    6. Apply ALL Process Reductions
+echo    7. View Current Processes
+echo    8. Return to Main Menu
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-8]: "
 
-if "%opcion%"=="1" goto APPS_FONDO
-if "%opcion%"=="2" goto SYSMAIN
-if "%opcion%"=="3" goto WSEARCH
-if "%opcion%"=="4" goto INICIO_PROGS
-if "%opcion%"=="5" goto OPTIMIZAR_RAM
-if "%opcion%"=="6" goto TODOS_PROCESOS
-if "%opcion%"=="7" goto VER_PROCESOS
-if "%opcion%"=="8" goto INICIO
-goto PROCESOS
+if "%option%"=="1" goto APPS_BACKGROUND
+if "%option%"=="2" goto SYSMAIN
+if "%option%"=="3" goto WSEARCH
+if "%option%"=="4" goto STARTUP_PROGS
+if "%option%"=="5" goto OPTIMIZE_RAM
+if "%option%"=="6" goto ALLPROCESSES
+if "%option%"=="7" goto VIEWPROCESSES
+if "%option%"=="8" goto START
+goto PROCESSES
 
-:APPS_FONDO
+:APPS_BACKGROUND
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo       DESACTIVAR APLICACIONES EN SEGUNDO PLANO
-echo  ========================================================
-echo.
-echo  Esto evitara que las apps se ejecuten en segundo plano
-echo  ahorrando RAM y CPU.
-echo.
-echo    1. Aplicar cambios
-echo    2. Cancelar
-echo.
+echo             DISABLE BACKGROUND APPLICATIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  This will prevent apps from running in the background
+echo  saving RAM and CPU.
+echo.
+echo    1. Apply changes
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto APPS_FONDO_APLICAR
-if "%opcion%"=="2" goto PROCESOS
-goto APPS_FONDO
+if "%option%"=="1" goto APPS_BACKGROUND_APPLY
+if "%option%"=="2" goto PROCESSES
+goto APPS_BACKGROUND
 
-:APPS_FONDO_APLICAR
+:APPS_BACKGROUND_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando aplicaciones en segundo plano...
+echo  ZEK V.1 - Disabling background applications...
 echo  ========================================================
 echo.
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" /v GlobalUserDisabled /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v LetAppsRunInBackground /t REG_DWORD /d 2 /f >nul 2>&1
 
-echo  [OK] Aplicaciones en segundo plano desactivadas!
+echo  [OK] Background applications disabled!
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
 :SYSMAIN
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            DESACTIVAR SYSMAIN (SUPERFETCH)
-echo  ========================================================
-echo.
-echo  SysMain precarga apps en RAM pero consume muchos recursos.
-echo  Desactivarlo libera RAM y reduce procesos.
-echo.
-echo    1. Desactivar SysMain
-echo    2. Cancelar
-echo.
+echo                DISABLE SYSMAIN (SUPERFETCH)
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  SysMain preloads apps in RAM but consumes many resources.
+echo  Disabling it frees RAM and reduces processes.
+echo.
+echo    1. Disable SysMain
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto SYSMAIN_APLICAR
-if "%opcion%"=="2" goto PROCESOS
+if "%option%"=="1" goto SYSMAIN_APPLY
+if "%option%"=="2" goto PROCESSES
 goto SYSMAIN
 
-:SYSMAIN_APLICAR
+:SYSMAIN_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando SysMain...
+echo  ZEK V.1 - Disabling SysMain...
 sc config SysMain start= disabled >nul 2>&1
 net stop SysMain >nul 2>&1
-echo  [OK] SysMain desactivado correctamente!
+echo  [OK] SysMain disabled successfully!
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
 :WSEARCH
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            DESACTIVAR WINDOWS SEARCH
-echo  ========================================================
-echo.
-echo  Windows Search indexa archivos constantemente.
-echo  Desactivarlo reduce uso de CPU y disco.
-echo.
-echo    1. Desactivar Windows Search
-echo    2. Cancelar
-echo.
+echo                   DISABLE WINDOWS SEARCH
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  Windows Search constantly indexes files.
+echo  Disabling it reduces CPU and disk usage.
+echo.
+echo    1. Disable Windows Search
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto WSEARCH_APLICAR
-if "%opcion%"=="2" goto PROCESOS
+if "%option%"=="1" goto WSEARCH_APPLY
+if "%option%"=="2" goto PROCESSES
 goto WSEARCH
 
-:WSEARCH_APLICAR
+:WSEARCH_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Windows Search...
+echo  ZEK V.1 - Disabling Windows Search...
 sc config WSearch start= disabled >nul 2>&1
 net stop WSearch >nul 2>&1
-echo  [OK] Windows Search desactivado correctamente!
+echo  [OK] Windows Search disabled successfully!
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
-:INICIO_PROGS
+:STARTUP_PROGS
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo          DESACTIVAR PROGRAMAS DE INICIO
+echo                DISABLE STARTUP PROGRAMS
 echo  ========================================================
 echo.
-echo  Se abrira el Administrador de Tareas en la pestana
-echo  de Inicio para que desactives los programas que
-echo  no necesites al arrancar Windows.
+echo  Task Manager will open in the Startup tab
+echo  so you can disable programs you don't need
+echo  when Windows starts.
 echo.
-echo  Pulsa cualquier tecla para continuar...
+echo  Press any key to continue...
 pause >nul
 start taskmgr /7
 echo.
-echo  [OK] Administrador de Tareas abierto.
-echo  Ve a la pestana "Inicio" y desactiva lo que no uses.
+echo  [OK] Task Manager opened.
+echo  Go to the "Startup" tab and disable what you don't use.
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
-:OPTIMIZAR_RAM
+:OPTIMIZE_RAM
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo               OPTIMIZAR USO DE RAM
-echo  ========================================================
-echo.
-echo  Esto liberara la memoria RAM que esta en espera
-echo  y optimizara la gestion de memoria del sistema.
-echo.
-echo    1. Optimizar RAM ahora
-echo    2. Cancelar
-echo.
+echo                     OPTIMIZE RAM USAGE
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  This will free up standby RAM memory
+echo  and optimize system memory management.
+echo.
+echo    1. Optimize RAM now
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto OPTIMIZAR_RAM_APLICAR
-if "%opcion%"=="2" goto PROCESOS
-goto OPTIMIZAR_RAM
+if "%option%"=="1" goto OPTIMIZE_RAM_APPLY
+if "%option%"=="2" goto PROCESSES
+goto OPTIMIZE_RAM
 
-:OPTIMIZAR_RAM_APLICAR
+:OPTIMIZE_RAM_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Optimizando uso de RAM...
+echo  ZEK V.1 - Optimizing RAM usage...
 echo  ========================================================
 echo.
-echo  [1/3] Liberando memoria en espera...
+echo  [1/3] Freeing standby memory...
 powershell -Command "Clear-RecycleBin -Force" >nul 2>&1
 powershell -Command "[System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers()" >nul 2>&1
 
-echo  [2/3] Optimizando gestion de memoria...
+echo  [2/3] Optimizing memory management...
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v ClearPageFileAtShutdown /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v LargeSystemCache /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v DisablePagingExecutive /t REG_DWORD /d 1 /f >nul 2>&1
 
-echo  [3/3] Reduciendo procesos innecesarios...
+echo  [3/3] Reducing unnecessary processes...
 taskkill /f /im OneDrive.exe >nul 2>&1
 taskkill /f /im MicrosoftEdge.exe >nul 2>&1
 
 echo.
 echo  ========================================================
-echo          [OK] RAM optimizada correctamente!
+echo          [OK] RAM optimized successfully!
 echo  ========================================================
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
-:TODOS_PROCESOS
+:ALLPROCESSES
 cls
 color 03
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                       ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo     APLICAR TODAS LAS REDUCCIONES DE PROCESOS
-echo  ========================================================
-echo.
-echo  Se aplicaran todos los cambios para reducir procesos.
-echo  Se recomienda crear punto de restauracion.
-echo.
-echo    1. Si, crear punto + aplicar cambios
-echo    2. No, aplicar sin restaurar
-echo    3. Cancelar
-echo.
+echo                 APPLY ALL PROCESS REDUCTIONS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo  All process reduction changes will be applied.
+echo  It is recommended to create a restore point.
+echo.
+echo    1. Yes, create restore point + apply changes
+echo    2. No, apply without restore
+echo    3. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto TODOS_PROCESOS_CON_RESTAURAR
-if "%opcion%"=="2" goto TODOS_PROCESOS_SIN_RESTAURAR
-if "%opcion%"=="3" goto PROCESOS
-goto TODOS_PROCESOS
+if "%option%"=="1" goto ALLPROCESSES_WITH_RESTORE
+if "%option%"=="2" goto ALLPROCESSES_WITHOUT_RESTORE
+if "%option%"=="3" goto PROCESSES
+goto ALLPROCESSES
 
-:TODOS_PROCESOS_CON_RESTAURAR
+:ALLPROCESSES_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Reduccion de Procesos"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PROCESOS
+call :CREATE_RESTORE_POINT "Process Reduction"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PROCESSES
 )
 
-:TODOS_PROCESOS_SIN_RESTAURAR
+:ALLPROCESSES_WITHOUT_RESTORE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Aplicando todas las reducciones de procesos...
+echo  ZEK V.1 - Applying all process reductions...
 echo  ========================================================
 echo.
-echo  [1/6] Desactivando apps en segundo plano...
+echo  [1/6] Disabling background apps...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" /v GlobalUserDisabled /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v LetAppsRunInBackground /t REG_DWORD /d 2 /f >nul 2>&1
 
-echo  [2/6] Desactivando SysMain (Superfetch)...
+echo  [2/6] Disabling SysMain (Superfetch)...
 sc config SysMain start= disabled >nul 2>&1
 net stop SysMain >nul 2>&1
 
-echo  [3/6] Desactivando Windows Search...
+echo  [3/6] Disabling Windows Search...
 sc config WSearch start= disabled >nul 2>&1
 net stop WSearch >nul 2>&1
 
-echo  [4/6] Desactivando servicios adicionales...
+echo  [4/6] Disabling additional services...
 sc config DiagTrack start= disabled >nul 2>&1
 sc config dmwappushservice start= disabled >nul 2>&1
 sc config WerSvc start= disabled >nul 2>&1
 sc config WpnService start= disabled >nul 2>&1
 sc config wuauserv start= disabled >nul 2>&1
 
-echo  [5/6] Optimizando memoria...
+echo  [5/6] Optimizing memory...
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v LargeSystemCache /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v DisablePagingExecutive /t REG_DWORD /d 1 /f >nul 2>&1
 
-echo  [6/6] Cerrando procesos innecesarios...
+echo  [6/6] Closing unnecessary processes...
 taskkill /f /im OneDrive.exe >nul 2>&1
 taskkill /f /im MicrosoftEdge.exe >nul 2>&1
 taskkill /f /im SkypeApp.exe >nul 2>&1
 
 echo.
 echo  ========================================================
-echo      [OK] Reduccion de procesos aplicada correctamente!
-echo      Se recomienda reiniciar el sistema.
+echo      [OK] Process reduction applied successfully!
+echo      It is recommended to restart the system.
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:VER_PROCESOS
+:VIEWPROCESSES
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Lista de procesos actuales:
+echo  ZEK V.1 - List of current processes:
 echo  ========================================================
 echo.
 tasklist | find /c "exe"
-echo procesos activos actualmente.
+echo active processes currently.
 echo.
-echo  Top 10 procesos por uso de memoria:
+echo  Top 10 processes by memory usage:
 tasklist /FI "STATUS eq RUNNING" /FO TABLE /NH | sort /R /+58 | head -10
 echo.
 pause
-goto PROCESOS
+goto PROCESSES
 
-:PRIVACIDAD
+:PRIVACY
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              CONFIGURACION DE PRIVACIDAD
-echo  ========================================================
-echo.
-echo    1. Desactivar Telemetria
-echo    2. Desactivar Cortana
-echo    3. Desactivar Publicidad Personalizada
-echo    4. Desactivar Acceso a Camara y Microfono
-echo    5. Aplicar Todas las Opciones de Privacidad
-echo    6. Volver al Menu Principal
-echo.
+echo                   PRIVACY CONFIGURATION
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-6]: "
+echo    1. Disable Telemetry
+echo    2. Disable Cortana
+echo    3. Disable Personalized Ads
+echo    4. Disable Camera and Microphone Access
+echo    5. Apply All Privacy Options
+echo    6. Return to Main Menu
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-6]: "
 
-if "%opcion%"=="1" goto TELEMETRIA
-if "%opcion%"=="2" goto CORTANA
-if "%opcion%"=="3" goto PUBLICIDAD
-if "%opcion%"=="4" goto CAMARAMIC
-if "%opcion%"=="5" goto TODAPRIVACIDAD
-if "%opcion%"=="6" goto INICIO
-goto PRIVACIDAD
+if "%option%"=="1" goto TELEMETRY
+if "%option%"=="2" goto CORTANA
+if "%option%"=="3" goto ADS
+if "%option%"=="4" goto CAMEAMIC
+if "%option%"=="5" goto ALLPRIVACY
+if "%option%"=="6" goto START
+goto PRIVACY
 
-:TELEMETRIA
+:TELEMETRY
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              DESACTIVAR TELEMETRIA
-echo  ========================================================
-echo.
-echo  Esto evita que Windows envie datos de uso.
-echo  Se recomienda crear punto de restauracion.
-echo.
-echo    1. Si, crear punto + desactivar
-echo    2. No, desactivar sin restaurar
-echo    3. Cancelar
-echo.
+echo                     DISABLE TELEMETRY
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+echo  This prevents Windows from sending usage data.
+echo  It is recommended to create a restore point.
+echo.
+echo    1. Yes, create restore point + disable
+echo    2. No, disable without restore
+echo    3. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto TELEMETRIA_CON_RESTAURAR
-if "%opcion%"=="2" goto TELEMETRIA_APLICAR
-if "%opcion%"=="3" goto PRIVACIDAD
-goto TELEMETRIA
+if "%option%"=="1" goto TELEMETRY_WITH_RESTORE
+if "%option%"=="2" goto TELEMETRY_APPLY
+if "%option%"=="3" goto PRIVACY
+goto TELEMETRY
 
-:TELEMETRIA_CON_RESTAURAR
+:TELEMETRY_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Telemetria"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PRIVACIDAD
+call :CREATE_RESTORE_POINT "Disable Telemetry"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PRIVACY
 )
 
-:TELEMETRIA_APLICAR
+:TELEMETRY_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando telemetria y recoleccion de datos...
+echo  ZEK V.1 - Disabling telemetry and data collection...
 echo  ========================================================
 echo.
-echo  [1/3] Bloqueando telemetria del sistema...
+echo  [1/3] Blocking system telemetry...
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f >nul 2>&1
 
-echo  [2/3] Desactivando experiencias de usuario...
+echo  [2/3] Disabling user experiences...
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy" /v TailoredExperiencesWithDiagnosticDataEnabled /t REG_DWORD /d 0 /f >nul 2>&1
 
-echo  [3/3] Optimizando configuracion...
+echo  [3/3] Optimizing configuration...
 sc config DiagTrack start= disabled >nul 2>&1
 sc config dmwappushservice start= disabled >nul 2>&1
 
 echo.
 echo  ========================================================
-echo        [OK] Telemetria desactivada exitosamente!
+echo        [OK] Telemetry disabled successfully!
 echo  ========================================================
 echo.
 pause
-goto PRIVACIDAD
+goto PRIVACY
 
 :CORTANA
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo               DESACTIVAR CORTANA
+echo                      DISABLE CORTANA
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto CORTANA_CON_RESTAURAR
-if "%opcion%"=="2" goto CORTANA_APLICAR
-if "%opcion%"=="3" goto PRIVACIDAD
+if "%option%"=="1" goto CORTANA_WITH_RESTORE
+if "%option%"=="2" goto CORTANA_APPLY
+if "%option%"=="3" goto PRIVACY
 goto CORTANA
 
-:CORTANA_CON_RESTAURAR
+:CORTANA_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Cortana"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PRIVACIDAD
+call :CREATE_RESTORE_POINT "Disable Cortana"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PRIVACY
 )
 
-:CORTANA_APLICAR
+:CORTANA_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Cortana...
+echo  ZEK V.1 - Disabling Cortana...
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowSearchToUseLocation /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v ConnectedSearchUseWeb /t REG_DWORD /d 0 /f >nul 2>&1
-echo  [OK] Cortana desactivada correctamente!
+echo  [OK] Cortana disabled successfully!
 echo.
 pause
-goto PRIVACIDAD
+goto PRIVACY
 
-:PUBLICIDAD
+:ADS
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo         DESACTIVAR PUBLICIDAD PERSONALIZADA
+echo                   DISABLE PERSONALIZED ADS
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto PUBLICIDAD_CON_RESTAURAR
-if "%opcion%"=="2" goto PUBLICIDAD_APLICAR
-if "%opcion%"=="3" goto PRIVACIDAD
-goto PUBLICIDAD
+if "%option%"=="1" goto ADS_WITH_RESTORE
+if "%option%"=="2" goto ADS_APPLY
+if "%option%"=="3" goto PRIVACY
+goto ADS
 
-:PUBLICIDAD_CON_RESTAURAR
+:ADS_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Publicidad"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PRIVACIDAD
+call :CREATE_RESTORE_POINT "Disable Ads"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PRIVACY
 )
 
-:PUBLICIDAD_APLICAR
+:ADS_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando publicidad personalizada...
+echo  ZEK V.1 - Disabling personalized ads...
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy" /v TailoredExperiencesWithDiagnosticDataEnabled /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo" /v DisabledByGroupPolicy /t REG_DWORD /d 1 /f >nul 2>&1
-echo  [OK] Publicidad personalizada desactivada!
+echo  [OK] Personalized ads disabled!
 echo.
 pause
-goto PRIVACIDAD
+goto PRIVACY
 
-:CAMARAMIC
+:CAMEAMIC
 cls
 color 0D
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                    ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo      DESACTIVAR ACCESO A CAMARA Y MICROFONO
+echo          DISABLE CAMERA AND MICROPHONE ACCESS
 echo  ========================================================
 echo.
-echo  ATENCION: Esto restringe el acceso global.
+echo  WARNING: This restricts global access.
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto CAMARAMIC_CON_RESTAURAR
-if "%opcion%"=="2" goto CAMARAMIC_APLICAR
-if "%opcion%"=="3" goto PRIVACIDAD
-goto CAMARAMIC
+if "%option%"=="1" goto CAMEAMIC_WITH_RESTORE
+if "%option%"=="2" goto CAMEAMIC_APPLY
+if "%option%"=="3" goto PRIVACY
+goto CAMEAMIC
 
-:CAMARAMIC_CON_RESTAURAR
+:CAMEAMIC_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Restringir Camara y Microfono"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PRIVACIDAD
+call :CREATE_RESTORE_POINT "Restrict Camera and Microphone"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PRIVACY
 )
 
-:CAMARAMIC_APLICAR
+:CAMEAMIC_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Restringiendo acceso a camara y microfono...
+echo  ZEK V.1 - Restricting camera and microphone access...
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" /v Value /t REG_SZ /d Deny /f >nul 2>&1
-echo  [OK] Acceso a camara y microfono restringido!
+echo  [OK] Camera and microphone access restricted!
 echo.
 pause
-goto PRIVACIDAD
+goto PRIVACY
 
-:TODAPRIVACIDAD
+:ALLPRIVACY
 cls
 color 0D
 echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo     APLICAR TODAS LAS OPCIONES DE PRIVACIDAD
+echo     APPLY ALL PRIVACY OPTIONS
 echo  ========================================================
 echo.
-echo  Se aplicaran todos los cambios de privacidad.
-echo  Se recomienda crear punto de restauracion.
+echo  All privacy changes will be applied.
+echo  It is recommended to create a restore point.
 echo.
-echo    1. Si, crear punto + aplicar cambios
-echo    2. No, aplicar sin restaurar
-echo    3. Cancelar
+echo    1. Yes, create restore point + apply changes
+echo    2. No, apply without restore
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto TODAPRIVACIDAD_CON_RESTAURAR
-if "%opcion%"=="2" goto TODAPRIVACIDAD_SIN_RESTAURAR
-if "%opcion%"=="3" goto PRIVACIDAD
-goto TODAPRIVACIDAD
+if "%option%"=="1" goto ALLPRIVACY_WITH_RESTORE
+if "%option%"=="2" goto ALLPRIVACY_WITHOUT_RESTORE
+if "%option%"=="3" goto PRIVACY
+goto ALLPRIVACY
 
-:TODAPRIVACIDAD_CON_RESTAURAR
+:ALLPRIVACY_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Todas las Opciones de Privacidad"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto PRIVACIDAD
+call :CREATE_RESTORE_POINT "All Privacy Options"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto PRIVACY
 )
 
-:TODAPRIVACIDAD_SIN_RESTAURAR
+:ALLPRIVACY_WITHOUT_RESTORE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Aplicando todas las configuraciones de privacidad...
+echo  ZEK V.1 - Applying all privacy configurations...
 echo  ========================================================
 echo.
-echo  [1/4] Desactivando telemetria...
-call :TELEMETRIA_DIRECTO
-echo  [2/4] Desactivando Cortana...
-call :CORTANA_DIRECTO
-echo  [3/4] Desactivando publicidad...
-call :PUBLICIDAD_DIRECTO
-echo  [4/4] Restringiendo camara y microfono...
-call :CAMARAMIC_DIRECTO
+echo  [1/4] Disabling telemetry...
+call :TELEMETRY_DIRECT
+echo  [2/4] Disabling Cortana...
+call :CORTANA_DIRECT
+echo  [3/4] Disabling ads...
+call :ADS_DIRECT
+echo  [4/4] Restricting camera and microphone...
+call :CAMEAMIC_DIRECT
 echo.
 echo  ========================================================
-echo      [OK] Todas las opciones de privacidad aplicadas!
+echo      [OK] All privacy options applied!
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:LIMPIEZA
+:CLEANUP
 cls
 color 0A
 echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo                LIMPIEZA DEL SISTEMA
+echo                SYSTEM CLEANUP
 echo  ========================================================
 echo.
-echo    1. Limpiar Archivos Temporales
-echo    2. Vaciar Papelera de Reciclaje
-echo    3. Limpiar Cache de Windows Store
-echo    4. Limpiar Historial y Cookies
-echo    5. Ejecutar Limpieza Completa
-echo    6. Volver al Menu Principal
+echo    1. Clean Temporary Files
+echo    2. Empty Recycle Bin
+echo    3. Clear Windows Store Cache
+echo    4. Clear History and Cookies
+echo    5. Run Full Cleanup
+echo    6. Return to Main Menu
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-6]: "
+set /p "option=  Select an option [1-6]: "
 
-if "%opcion%"=="1" goto TEMPORALES
-if "%opcion%"=="2" goto PAPELERA
-if "%opcion%"=="3" goto CACHE
-if "%opcion%"=="4" goto HISTORIAL
-if "%opcion%"=="5" goto LIMPIEZACOMPLETA
-if "%opcion%"=="6" goto INICIO
-goto LIMPIEZA
+if "%option%"=="1" goto TEMPORARY
+if "%option%"=="2" goto RECYCLE
+if "%option%"=="3" goto CACHE
+if "%option%"=="4" goto HISTORY
+if "%option%"=="5" goto FULLCLEANUP
+if "%option%"=="6" goto START
+goto CLEANUP
 
-:TEMPORALES
+:TEMPORARY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Limpiando archivos temporales...
+echo  ZEK V.1 - Cleaning temporary files...
 echo  ========================================================
 echo.
-echo  [1/4] Limpiando carpeta TEMP del usuario...
+echo  [1/4] Cleaning user TEMP folder...
 del /q /f /s %TEMP%\* 2>nul
-echo  [2/4] Limpiando carpeta TEMP de Windows...
+echo  [2/4] Cleaning Windows TEMP folder...
 del /q /f /s C:\Windows\Temp\* 2>nul
-echo  [3/4] Limpiando Prefetch...
+echo  [3/4] Cleaning Prefetch...
 del /q /f /s C:\Windows\Prefetch\* 2>nul
-echo  [4/4] Eliminando archivos temporales de Internet...
+echo  [4/4] Deleting Internet temporary files...
 RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8
 echo.
 echo  ========================================================
-echo      [OK] Archivos temporales eliminados correctamente!
+echo      [OK] Temporary files deleted successfully!
 echo  ========================================================
 echo.
 pause
-goto LIMPIEZA
+goto CLEANUP
 
-:PAPELERA
+:RECYCLE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Vaciando papelera de reciclaje...
+echo  ZEK V.1 - Emptying Recycle Bin...
 rd /s /q %systemdrive%\$Recycle.Bin 2>nul
-echo  [OK] Papelera vaciada!
+echo  [OK] Recycle Bin emptied!
 echo.
 pause
-goto LIMPIEZA
+goto CLEANUP
 
 :CACHE
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Limpiando cache de Windows Store...
+echo  ZEK V.1 - Clearing Windows Store cache...
 wsreset.exe >nul 2>&1
-echo  [OK] Cache de Windows Store limpiado!
+echo  [OK] Windows Store cache cleared!
 echo.
 pause
-goto LIMPIEZA
+goto CLEANUP
 
-:HISTORIAL
+:HISTORY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Limpiando historial y cookies...
+echo  ZEK V.1 - Clearing history and cookies...
 RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 255
-echo  [OK] Historial y cookies eliminados!
+echo  [OK] History and cookies deleted!
 echo.
 pause
-goto LIMPIEZA
+goto CLEANUP
 
-:LIMPIEZACOMPLETA
+:FULLCLEANUP
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Ejecutando limpieza completa del sistema...
+echo  ZEK V.1 - Running full system cleanup...
 echo  ========================================================
 echo.
-echo  [1/5] Limpiando archivos temporales...
+echo  [1/5] Cleaning temporary files...
 del /q /f /s %TEMP%\* 2>nul
 del /q /f /s C:\Windows\Temp\* 2>nul
 del /q /f /s C:\Windows\Prefetch\* 2>nul
 
-echo  [2/5] Vaciando papelera de reciclaje...
+echo  [2/5] Emptying Recycle Bin...
 rd /s /q %systemdrive%\$Recycle.Bin 2>nul
 
-echo  [3/5] Limpiando cache de Windows Store...
+echo  [3/5] Clearing Windows Store cache...
 wsreset.exe >nul 2>&1
 
-echo  [4/5] Limpiando historial y cookies...
+echo  [4/5] Clearing history and cookies...
 RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 255
 
-echo  [5/5] Ejecutando Liberador de espacio en disco...
+echo  [5/5] Running Disk Cleanup...
 cleanmgr /sagerun:1 >nul 2>&1
 
 echo.
 echo  ========================================================
-echo      [OK] Limpieza completa finalizada con exito!
-echo      Espacio liberado en el sistema.
+echo      [OK] Full cleanup completed successfully!
+echo      Disk space has been freed.
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:AVANZADAS
+:ADVANCED
 cls
 color 0C
 echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              OPTIMIZACIONES AVANZADAS
+echo              ADVANCED OPTIMIZATIONS
 echo  ========================================================
 echo.
-echo    1. Desactivar Windows Defender (Temporal)
-echo    2. Desactivar Actualizaciones Automaticas
-echo    3. Desactivar OneDrive
-echo    4. Desactivar Hibernacion (libera espacio)
-echo    5. Quitar Apps Preinstaladas (Bloatware)
-echo    6. Reparar Archivos del Sistema (SFC)
-echo    7. Volver al Menu Principal
+echo    1. Disable Windows Defender (Temporary)
+echo    2. Disable Automatic Updates
+echo    3. Disable OneDrive
+echo    4. Disable Hibernation (frees space)
+echo    5. Remove Preinstalled Apps (Bloatware)
+echo    6. Repair System Files (SFC)
+echo    7. Return to Main Menu
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-7]: "
+set /p "option=  Select an option [1-7]: "
 
-if "%opcion%"=="1" goto DEFENDER
-if "%opcion%"=="2" goto ACTUALIZACIONES
-if "%opcion%"=="3" goto ONEDRIVE
-if "%opcion%"=="4" goto HIBERNACION
-if "%opcion%"=="5" goto BLOTWARE
-if "%opcion%"=="6" goto SFC
-if "%opcion%"=="7" goto INICIO
-goto AVANZADAS
+if "%option%"=="1" goto DEFENDER
+if "%option%"=="2" goto UPDATES
+if "%option%"=="3" goto ONEDRIVE
+if "%option%"=="4" goto HIBERNATION
+if "%option%"=="5" goto BLOATWARE
+if "%option%"=="6" goto SFC
+if "%option%"=="7" goto START
+goto ADVANCED
 
 :DEFENDER
 cls
@@ -1494,93 +1494,93 @@ echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo         DESACTIVAR WINDOWS DEFENDER
+echo         DISABLE WINDOWS DEFENDER
 echo  ========================================================
 echo.
-echo  ADVERTENCIA: Desactivar el antivirus es peligroso
-echo  Se recomienda crear punto de restauracion
+echo  WARNING: Disabling the antivirus is dangerous
+echo  It is recommended to create a restore point
 echo.
-echo    1. Si, crear punto + desactivar
-echo    2. No, desactivar sin restaurar
-echo    3. Cancelar
+echo    1. Yes, create restore point + disable
+echo    2. No, disable without restore
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto DEFENDER_CON_RESTAURAR
-if "%opcion%"=="2" goto DEFENDER_APLICAR
-if "%opcion%"=="3" goto AVANZADAS
+if "%option%"=="1" goto DEFENDER_WITH_RESTORE
+if "%option%"=="2" goto DEFENDER_APPLY
+if "%option%"=="3" goto ADVANCED
 goto DEFENDER
 
-:DEFENDER_CON_RESTAURAR
+:DEFENDER_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar Windows Defender"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto AVANZADAS
+call :CREATE_RESTORE_POINT "Disable Windows Defender"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto ADVANCED
 )
 
-:DEFENDER_APLICAR
+:DEFENDER_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando Windows Defender temporalmente...
+echo  ZEK V.1 - Temporarily disabling Windows Defender...
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v DisableRealtimeMonitoring /t REG_DWORD /d 1 /f >nul 2>&1
 echo.
-echo  [OK] Windows Defender desactivado temporalmente!
-echo  RECUERDA: Reactivar despues para mantener la seguridad.
+echo  [OK] Windows Defender temporarily disabled!
+echo  REMEMBER: Re-enable it afterwards to maintain security.
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
-:ACTUALIZACIONES
+:UPDATES
 cls
 color 0C
 echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo       DESACTIVAR ACTUALIZACIONES AUTOMATICAS
+echo       DISABLE AUTOMATIC UPDATES
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto ACTUALIZACIONES_CON_RESTAURAR
-if "%opcion%"=="2" goto ACTUALIZACIONES_APLICAR
-if "%opcion%"=="3" goto AVANZADAS
-goto ACTUALIZACIONES
+if "%option%"=="1" goto UPDATES_WITH_RESTORE
+if "%option%"=="2" goto UPDATES_APPLY
+if "%option%"=="3" goto ADVANCED
+goto UPDATES
 
-:ACTUALIZACIONES_CON_RESTAURAR
+:UPDATES_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Configurar Actualizaciones"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto AVANZADAS
+call :CREATE_RESTORE_POINT "Configure Updates"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto ADVANCED
 )
 
-:ACTUALIZACIONES_APLICAR
+:UPDATES_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Configurando actualizaciones automaticas...
+echo  ZEK V.1 - Configuring automatic updates...
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoUpdate /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v AUOptions /t REG_DWORD /d 2 /f >nul 2>&1
-echo  [OK] Actualizaciones automaticas configuradas!
-echo  Ahora solo se descargaran cuando tu lo decidas.
+echo  [OK] Automatic updates configured!
+echo  Now they will only download when you decide.
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
 :ONEDRIVE
 cls
@@ -1589,123 +1589,123 @@ echo.
 echo  ========================================================
 echo                        ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo              DESACTIVAR ONEDRIVE
+echo              DISABLE ONEDRIVE
 echo  ========================================================
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto ONEDRIVE_CON_RESTAURAR
-if "%opcion%"=="2" goto ONEDRIVE_APLICAR
-if "%opcion%"=="3" goto AVANZADAS
+if "%option%"=="1" goto ONEDRIVE_WITH_RESTORE
+if "%option%"=="2" goto ONEDRIVE_APPLY
+if "%option%"=="3" goto ADVANCED
 goto ONEDRIVE
 
-:ONEDRIVE_CON_RESTAURAR
+:ONEDRIVE_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Desactivar OneDrive"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto AVANZADAS
+call :CREATE_RESTORE_POINT "Disable OneDrive"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto ADVANCED
 )
 
-:ONEDRIVE_APLICAR
+:ONEDRIVE_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando OneDrive...
+echo  ZEK V.1 - Disabling OneDrive...
 taskkill /f /im OneDrive.exe >nul 2>&1
 %SystemRoot%\SysWOW64\OneDriveSetup.exe /uninstall >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f >nul 2>&1
-echo  [OK] OneDrive desactivado correctamente!
+echo  [OK] OneDrive disabled successfully!
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
-:HIBERNACION
+:HIBERNATION
 cls
 color 0C
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                      ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            DESACTIVAR HIBERNACION
-echo  ========================================================
-echo.
-echo  Esto libera varios GB de espacio en disco.
-echo  ATENCION: Perderas la opcion de hibernar.
-echo.
-echo    1. Desactivar hibernacion y liberar espacio
-echo    2. Cancelar
-echo.
+echo                    DISABLE HIBERNATION
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  This frees up several GB of disk space.
+echo  WARNING: You will lose the option to hibernate.
+echo.
+echo    1. Disable hibernation and free space
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto HIBERNACION_APLICAR
-if "%opcion%"=="2" goto AVANZADAS
-goto HIBERNACION
+if "%option%"=="1" goto HIBERNATION_APPLY
+if "%option%"=="2" goto ADVANCED
+goto HIBERNATION
 
-:HIBERNACION_APLICAR
+:HIBERNATION_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Desactivando hibernacion...
+echo  ZEK V.1 - Disabling hibernation...
 powercfg -h off
 echo.
-echo  [OK] Hibernacion desactivada! Espacio en disco liberado.
+echo  [OK] Hibernation disabled! Disk space freed.
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
-:BLOTWARE
+:BLOATWARE
 cls
 color 0C
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo        QUITAR APPS PREINSTALADAS (BLOATWARE)
+echo            REMOVE PREINSTALLED APPS (BLOATWARE)
 echo  ========================================================
 echo.
-echo  Se eliminaran apps como:
-echo  - 3D Builder, Skype, Solitario, etc.
+echo  Apps like these will be removed:
+echo  - 3D Builder, Skype, Solitaire, etc.
 echo.
-echo    Quieres crear un punto de restauracion primero?
-echo    1. Si
+echo    Do you want to create a restore point first?
+echo    1. Yes
 echo    2. No
-echo    3. Cancelar
+echo    3. Cancel
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-3]: "
+set /p "option=  Select an option [1-3]: "
 
-if "%opcion%"=="1" goto BLOTWARE_CON_RESTAURAR
-if "%opcion%"=="2" goto BLOTWARE_APLICAR
-if "%opcion%"=="3" goto AVANZADAS
-goto BLOTWARE
+if "%option%"=="1" goto BLOATWARE_WITH_RESTORE
+if "%option%"=="2" goto BLOATWARE_APPLY
+if "%option%"=="3" goto ADVANCED
+goto BLOATWARE
 
-:BLOTWARE_CON_RESTAURAR
+:BLOATWARE_WITH_RESTORE
 cls
-call :CREAR_PUNTO_RESTAURACION "Eliminar Bloatware"
-if !punto_creado! equ 0 (
-    echo ADVERTENCIA: No se pudo crear el punto de restauracion.
-    set /p "cont=  Deseas continuar de todos modos? [S/N]: "
-    if /i not "!cont!"=="S" goto AVANZADAS
+call :CREATE_RESTORE_POINT "Remove Bloatware"
+if !point_created! equ 0 (
+    echo WARNING: Could not create restore point.
+    set /p "cont=  Do you want to continue anyway? [Y/N]: "
+    if /i not "!cont!"=="Y" goto ADVANCED
 )
 
-:BLOTWARE_APLICAR
+:BLOATWARE_APPLY
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Eliminando aplicaciones preinstaladas...
-echo  Esto puede tardar varios minutos...
+echo  ZEK V.1 - Removing preinstalled applications...
+echo  This may take several minutes...
 echo.
 powershell -Command "Get-AppxPackage *3dbuilder* | Remove-AppxPackage" >nul 2>&1
 powershell -Command "Get-AppxPackage *bingfinance* | Remove-AppxPackage" >nul 2>&1
@@ -1719,281 +1719,281 @@ powershell -Command "Get-AppxPackage *solitaire* | Remove-AppxPackage" >nul 2>&1
 powershell -Command "Get-AppxPackage *zunemusic* | Remove-AppxPackage" >nul 2>&1
 powershell -Command "Get-AppxPackage *zunevideo* | Remove-AppxPackage" >nul 2>&1
 echo.
-echo  [OK] Bloatware eliminado correctamente!
+echo  [OK] Bloatware removed successfully!
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
 :SFC
 cls
 color 0C
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo        REPARAR ARCHIVOS DEL SISTEMA (SFC)
-echo  ========================================================
-echo.
-echo  Esto verificara y reparara archivos del sistema.
-echo  Puede tardar varios minutos.
-echo.
-echo    1. Ejecutar SFC /scannow
-echo    2. Cancelar
-echo.
+echo                   REPAIR SYSTEM FILES (SFC)
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  This will verify and repair system files.
+echo  It may take several minutes.
+echo.
+echo    1. Run SFC /scannow
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto SFC_EJECUTAR
-if "%opcion%"=="2" goto AVANZADAS
+if "%option%"=="1" goto SFC_RUN
+if "%option%"=="2" goto ADVANCED
 goto SFC
 
-:SFC_EJECUTAR
+:SFC_RUN
 cls
 color 0B
 echo.
-echo  ZEK V.1 - Ejecutando reparacion de archivos del sistema...
-echo  Esto puede tardar varios minutos...
+echo  ZEK V.1 - Running system file repair...
+echo  This may take several minutes...
 echo  ========================================================
 echo.
 sfc /scannow
 echo.
-echo  Reparacion completada.
+echo  Repair completed.
 echo.
 pause
-goto AVANZADAS
+goto ADVANCED
 
-:MENU_RESTAURAR
+:RESTORE_MENU
 cls
 color 01
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo           PUNTOS DE RESTAURACION DEL SISTEMA
-echo  ========================================================
-echo.
-echo    1. Crear punto de restauracion AHORA
-echo    2. Verificar estado de Restauracion del Sistema
-echo    3. Activar Restauracion del Sistema
-echo    4. Ver puntos de restauracion existentes
-echo    5. Volver al Menu Principal
-echo.
+echo                   SYSTEM RESTORE POINTS
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-5]: "
+echo    1. Create restore point NOW
+echo    2. Check System Restore status
+echo    3. Enable System Restore
+echo    4. View existing restore points
+echo    5. Return to Main Menu
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-5]: "
 
-if "%opcion%"=="1" goto CREAR_PUNTO_AHORA
-if "%opcion%"=="2" goto VERIFICAR_ESTADO
-if "%opcion%"=="3" goto ACTIVAR_RESTAURACION
-if "%opcion%"=="4" goto VER_PUNTOS
-if "%opcion%"=="5" goto INICIO
-goto MENU_RESTAURAR
+if "%option%"=="1" goto CREATE_POINT_NOW
+if "%option%"=="2" goto CHECK_STATUS
+if "%option%"=="3" goto ENABLE_RESTORE
+if "%option%"=="4" goto VIEW_POINTS
+if "%option%"=="5" goto START
+goto RESTORE_MENU
 
-:CREAR_PUNTO_AHORA
+:CREATE_POINT_NOW
 cls
 color 09
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo         CREAR PUNTO DE RESTAURACION AHORA
+echo                CREATE RESTORE POINT NOW
 echo  ========================================================
 echo.
-call :CREAR_PUNTO_RESTAURACION "Punto Manual del Optimizador"
-if !punto_creado! equ 1 (
+call :CREATE_RESTORE_POINT "Manual Point from Optimizer"
+if !point_created! equ 1 (
     echo.
-    echo  [OK] Punto de restauracion creado exitosamente!
+    echo  [OK] Restore point created successfully!
 ) else (
     echo.
-    echo  [ERROR] No se pudo crear el punto de restauracion.
-    echo  Verifica que la proteccion del sistema este activada.
+    echo  [ERROR] Could not create restore point.
+    echo  Check that system protection is enabled.
 )
 echo.
 pause
-goto MENU_RESTAURAR
+goto RESTORE_MENU
 
-:VERIFICAR_ESTADO
+:CHECK_STATUS
 cls
 color 09
 echo.
-echo  ZEK V.1 - Verificando estado de Restauracion del Sistema...
+echo  ZEK V.1 - Checking System Restore status...
 echo  ========================================================
 echo.
 wmic.exe /Namespace:\\root\default Path SystemRestore Get Disabled /Value | find "Disabled"
 echo.
 pause
-goto MENU_RESTAURAR
+goto RESTORE_MENU
 
-:ACTIVAR_RESTAURACION
+:ENABLE_RESTORE
 cls
 color 01
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo       ACTIVAR RESTAURACION DEL SISTEMA
-echo  ========================================================
-echo.
-echo  Esto habilitara la proteccion del sistema.
-echo.
-echo    1. Activar Restauracion del Sistema
-echo    2. Cancelar
-echo.
+echo                 ENABLE SYSTEM RESTORE
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+echo  This will enable system protection.
+echo.
+echo    1. Enable System Restore
+echo    2. Cancel
+echo.
+echo  ========================================================
+echo.
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto ACTIVAR_RESTAURACION_EJECUTAR
-if "%opcion%"=="2" goto MENU_RESTAURAR
-goto ACTIVAR_RESTAURACION
+if "%option%"=="1" goto ENABLE_RESTORE_RUN
+if "%option%"=="2" goto RESTORE_MENU
+goto ENABLE_RESTORE
 
-:ACTIVAR_RESTAURACION_EJECUTAR
+:ENABLE_RESTORE_RUN
 cls
 color 09
 echo.
-echo  ZEK V.1 - Activando Restauracion del Sistema...
+echo  ZEK V.1 - Enabling System Restore...
 powershell -Command "Enable-ComputerRestore -Drive 'C:\'" >nul 2>&1
 echo.
-echo  Restauracion del Sistema activada.
+echo  System Restore enabled.
 echo.
 pause
-goto MENU_RESTAURAR
+goto RESTORE_MENU
 
-:VER_PUNTOS
+:VIEW_POINTS
 cls
 color 09
 echo.
-echo  ZEK V.1 - Lista de puntos de restauracion existentes:
+echo  ZEK V.1 - List of existing restore points:
 echo  ========================================================
 echo.
 vssadmin list shadows
 echo.
 pause
-goto MENU_RESTAURAR
+goto RESTORE_MENU
 
-:INFOSISTEMA
+:SYSINFO
 cls
 color 09
 echo.
 echo  ========================================================
-echo                        ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo  ========================================================
-echo            INFORMACION DEL SISTEMA
+echo                     SYSTEM INFORMATION
 echo  ========================================================
 echo.
-systeminfo | findstr /B /C:"Nombre del sistema operativo" /C:"Version del sistema operativo" /C:"Procesador(es)" /C:"Memoria fisica total" /C:"Memoria fisica disponible" /C:"Espacio en disco"
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Processor(s)" /C:"Total Physical Memory" /C:"Available Physical Memory" /C:"Disk Space"
 echo.
 echo  ========================================================
 echo.
 pause
-goto INICIO
+goto START
 
-:CREAR_PUNTO_RESTAURACION
-set "descripcion=%~1"
-set punto_creado=0
-echo ZEK V.1 - Creando punto de restauracion: "%descripcion%"
+:CREATE_RESTORE_POINT
+set "description=%~1"
+set point_created=0
+echo ZEK V.1 - Creating restore point: "%description%"
 echo.
 
-:: Verificar si la restauracion del sistema esta habilitada
+:: Check if system restore is enabled
 wmic.exe /Namespace:\\root\default Path SystemRestore Get Disabled | find "0" >nul
 if %errorlevel% neq 0 (
-    echo ADVERTENCIA: La restauracion del sistema no esta habilitada.
-    echo Intentando habilitar...
+    echo WARNING: System Restore is not enabled.
+    echo Attempting to enable...
     powershell -Command "Enable-ComputerRestore -Drive 'C:\'" >nul 2>&1
 )
 
-:: Crear punto de restauracion
-wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "%descripcion%", 100, 7 >nul 2>&1
+:: Create restore point
+wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "%description%", 100, 7 >nul 2>&1
 
 if %errorlevel% equ 0 (
-    set punto_creado=1
-    echo [OK] Punto de restauracion creado: %descripcion%
+    set point_created=1
+    echo [OK] Restore point created: %description%
 ) else (
-    set punto_creado=0
-    echo [ERROR] No se pudo crear el punto de restauracion
+    set point_created=0
+    echo [ERROR] Could not create restore point
 )
 
 exit /b
 
-:: Funciones directas (sin preguntar)
-:MAXRENDIMIENTO_DIRECTO
+:: Direct functions (without asking)
+:MAXPERFORMANCE_DIRECT
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /t REG_DWORD /d 2 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1 /f >nul 2>&1
 exit /b
 
-:ANIMACIONES_DIRECTO
+:ANIMATIONS_DIRECT
 reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 9012078010000000 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v MinAnimate /t REG_SZ /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAnimations /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:TRANSPARENCIAS_DIRECTO
+:TRANSPARENCY_DIRECT
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v EnableTransparency /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:PLANENERGIA_DIRECTO
+:POWERPLAN_DIRECT
 powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c >nul 2>&1
 exit /b
 
-:NOTIFICACIONES_DIRECTO
+:NOTIFICATIONS_DIRECT
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\PushNotifications" /v ToastEnabled /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:TELEMETRIA_DIRECTO
+:TELEMETRY_DIRECT
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:CORTANA_DIRECTO
+:CORTANA_DIRECT
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:PUBLICIDAD_DIRECTO
+:ADS_DIRECT
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f >nul 2>&1
 exit /b
 
-:CAMARAMIC_DIRECTO
+:CAMEAMIC_DIRECT
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f >nul 2>&1
 exit /b
 
-:SALIR
+:EXIT
 cls
 color 0D
 echo.
 echo  ========================================================
 echo.
-echo                      ZEK V.1 OPTIMIZER
+echo                     ZEK V.1 OPTIMIZER
 echo.
 echo  ========================================================
-echo     Gracias por usar el Optimizador de Windows!
+echo     Thank you for using the Windows Optimizer!
 echo.
-echo  Se recomienda reiniciar el sistema para aplicar
-echo  todos los cambios correctamente.
+echo  It is recommended to restart the system to apply
+echo  all changes correctly.
 echo.
-echo  Quieres reiniciar ahora?
-echo    1. Si, reiniciar ahora
-echo    2. No, salir sin reiniciar
+echo  Do you want to restart now?
+echo    1. Yes, restart now
+echo    2. No, exit without restarting
 echo.
 echo  ========================================================
 echo.
-set /p "opcion=  Selecciona una opcion [1-2]: "
+set /p "option=  Select an option [1-2]: "
 
-if "%opcion%"=="1" goto REINICIAR
-if "%opcion%"=="2" goto SALIR_SIN_REINICIAR
-goto SALIR
+if "%option%"=="1" goto RESTART
+if "%option%"=="2" goto EXIT_WITHOUT_RESTART
+goto EXIT
 
-:REINICIAR
+:RESTART
 echo.
-echo  ZEK V.1 - El sistema se reiniciara en 5 segundos...
-shutdown /r /t 5 /c "Reinicio programado por ZEK V.1 Optimizer"
+echo  ZEK V.1 - The system will restart in 5 seconds...
+shutdown /r /t 5 /c "Restart scheduled by ZEK V.1 Optimizer"
 echo.
 pause
 exit
 
-:SALIR_SIN_REINICIAR
+:EXIT_WITHOUT_RESTART
 echo.
-echo  ZEK V.1 - Saliendo del Optimizador...
-echo  Recuerda reiniciar manualmente para aplicar todos los cambios.
+echo  ZEK V.1 - Exiting Optimizer...
+echo  Remember to restart manually to apply all changes.
 echo.
 pause
 exit
